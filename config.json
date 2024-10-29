@@ -1,0 +1,283 @@
+{
+  "db_options": [],
+  "honeypots": {
+    "dhcp": {
+      "backup_count": 0,
+      "ip": "0.0.0.0",
+      "log_file_name": "dhcp.jsonl",
+      "max_bytes": 0,
+      "port": 67
+    },
+    "dicom": {
+      "backup_count": 0,
+      "ip": "0.0.0.0",
+      "log_file_name": "dicom.jsonl",
+      "max_bytes": 0,
+      "port": 11112
+    },
+    "dns": {
+      "backup_count": 0,
+      "ip": "0.0.0.0",
+      "log_file_name": "dns.jsonl",
+      "max_bytes": 0,
+      "port": 53
+    },
+    "ftp": {
+      "backup_count": 0,
+      "ip": "0.0.0.0",
+      "log_file_name": "ftp.jsonl",
+      "max_bytes": 0,
+      "options": [
+        "capture_commands"
+      ],
+      "password": "admin",
+      "port": 21,
+      "username": "admin"
+    },
+    "hl7": {
+      "backup_count": 0,
+      "ip": "0.0.0.0",
+      "log_file_name": "hl7.jsonl",
+      "max_bytes": 0,
+      "port": 2575
+    },
+    "http": {
+      "backup_count": 0,
+      "ip": "0.0.0.0",
+      "log_file_name": "http.jsonl",
+      "max_bytes": 0,
+      "options": [
+        "capture_commands",
+        "fix_get_client_ip"
+      ],
+      "password": "admin",
+      "port": 80,
+      "username": "admin"
+    },
+    "httpproxy": {
+      "backup_count": 0,
+      "ip": "0.0.0.0",
+      "log_file_name": "httpproxy.jsonl",
+      "max_bytes": 0,
+      "options": [
+        "capture_commands"
+      ],
+      "password": "admin",
+      "port": 8080,
+      "username": "admin"
+    },
+    "https": {
+      "backup_count": 0,
+      "ip": "0.0.0.0",
+      "log_file_name": "https.jsonl",
+      "max_bytes": 0,
+      "options": [
+        "capture_commands",
+        "fix_get_client_ip"
+      ],
+      "password": "admin",
+      "port": 443,
+      "username": "admin"
+    },
+    "imap": {
+      "backup_count": 0,
+      "ip": "0.0.0.0",
+      "log_file_name": "imap.jsonl",
+      "max_bytes": 0,
+      "options": [
+        "capture_commands"
+      ],
+      "password": "123456",
+      "port": 143,
+      "username": "root"
+    },
+    "ipp": {
+      "backup_count": 0,
+      "ip": "0.0.0.0",
+      "log_file_name": "ipp.jsonl",
+      "max_bytes": 0,
+      "options": [
+        "capture_commands"
+      ],
+      "password": "",
+      "port": 631,
+      "username": ""
+    },
+    "ldap": {
+      "backup_count": 0,
+      "ip": "0.0.0.0",
+      "log_file_name": "ldap.jsonl",
+      "max_bytes": 0,
+      "options": [
+        "capture_commands"
+      ],
+      "password": "123456",
+      "port": 389,
+      "username": "administrator"
+    },
+    "mssql": {
+      "backup_count": 0,
+      "ip": "0.0.0.0",
+      "log_file_name": "mssql.jsonl",
+      "max_bytes": 0,
+      "options": [
+        "capture_commands"
+      ],
+      "password": "",
+      "port": 1433,
+      "username": "sa"
+    },
+    "mysql": {
+      "backup_count": 0,
+      "ip": "0.0.0.0",
+      "log_file_name": "mysql.jsonl",
+      "max_bytes": 0,
+      "options": [
+        "capture_commands"
+      ],
+      "password": "123456",
+      "port": 3306,
+      "username": "root"
+    },
+    "ntp": {
+      "backup_count": 0,
+      "ip": "0.0.0.0",
+      "log_file_name": "ntp.jsonl",
+      "max_bytes": 0,
+      "options": [
+        "capture_commands"
+      ],
+      "password": "123456",
+      "port": 123,
+      "username": "administrator"
+    },
+    "oracle": {
+      "backup_count": 0,
+      "ip": "0.0.0.0",
+      "log_file_name": "oracle.jsonl",
+      "max_bytes": 0,
+      "options": [
+        "capture_commands"
+      ],
+      "password": "123456",
+      "port": 1521,
+      "username": "bi"
+    },
+    "pjl": {
+      "backup_count": 0,
+      "ip": "0.0.0.0",
+      "log_file_name": "pjl.jsonl",
+      "max_bytes": 0,
+      "options": [
+        "capture_commands"
+      ],
+      "password": "",
+      "port": 9100,
+      "username": ""
+    },
+    "pop3": {
+      "backup_count": 0,
+      "ip": "0.0.0.0",
+      "log_file_name": "pop3.jsonl",
+      "max_bytes": 0,
+      "options": [
+        "capture_commands"
+      ],
+      "password": "123456",
+      "port": 110,
+      "username": "root"
+    },
+    "rdp": {
+      "backup_count": 0,
+      "ip": "0.0.0.0",
+      "log_file_name": "rdp.jsonl",
+      "max_bytes": 0,
+      "options": [
+        "capture_commands"
+      ],
+      "password": "",
+      "port": 3389,
+      "username": ""
+    },
+    "sip": {
+      "backup_count": 0,
+      "ip": "0.0.0.0",
+      "log_file_name": "sip.jsonl",
+      "max_bytes": 0,
+      "options": [
+        "capture_commands"
+      ],
+      "password": "",
+      "port": 5060,
+      "username": ""
+    },
+    "smb": {
+      "backup_count": 0,
+      "ip": "0.0.0.0",
+      "log_file_name": "smb.jsonl",
+      "max_bytes": 0,
+      "options": [
+        "capture_commands"
+      ],
+      "password": "123456",
+      "port": 445,
+      "username": "administrator"
+    },
+    "smtp": {
+      "backup_count": 0,
+      "ip": "0.0.0.0",
+      "log_file_name": "smtp.jsonl",
+      "max_bytes": 0,
+      "options": [
+        "capture_commands"
+      ],
+      "password": "123456",
+      "port": 25,
+      "username": "root"
+    },
+    "snmp": {
+      "backup_count": 0,
+      "ip": "0.0.0.0",
+      "log_file_name": "snmp.jsonl",
+      "max_bytes": 0,
+      "options": [
+        "capture_commands"
+      ],
+      "password": "123456",
+      "port": 161,
+      "username": "privUser"
+    },
+    "ssh": {
+      "backup_count": 0,
+      "ip": "0.0.0.0",
+      "log_file_name": "ssh.jsonl",
+      "max_bytes": 0,
+      "options": [
+        "capture_commands"
+      ],
+      "password": "admin",
+      "port": 22,
+      "username": "admin"
+    },
+    "telnet": {
+      "backup_count": 0,
+      "ip": "0.0.0.0",
+      "log_file_name": "telnet.jsonl",
+      "max_bytes": 0,
+      "options": [
+        "capture_commands"
+      ],
+      "password": "123456",
+      "port": 23,
+      "username": "root"
+    }
+  },
+  "logs": "file,terminal,json",
+  "logs_location": "./logs/",
+  "postgres": "",
+  "sniffer_filter": "",
+  "sniffer_interface": "",
+  "sqlite_file": "",
+  "syslog_address": "",
+  "syslog_facility": 0
+}

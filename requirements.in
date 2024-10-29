@@ -1,0 +1,2 @@
+# FixMe: there is no release of honeypots containing the latest bug fixes; pin the version when a new one is released
+git+https://github.com/fkie-cad/honeypots.git@dd6fdd5b4f2ea64d4224f5a76643dbbc5f9b49c3

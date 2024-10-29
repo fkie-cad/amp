@@ -1,0 +1,16 @@
+---
+variables:
+  # Reduce output noise
+  PIP_DISABLE_PIP_VERSION_CHECK: 1
+  PIP_ROOT_USER_ACTION: "ignore"
+  # https://pythonspeed.com/articles/faster-pip-installs/
+  PIP_NO_COMPILE: 1
+
+
+pre-commit:
+  image: "python:3.9-bullseye"
+  variables:
+  script:
+    - pip3 install --quiet pre-commit==3.3.3
+    # Docker Compose is not installed in the CI
+    - SKIP=docker-compose-check pre-commit run --all-files

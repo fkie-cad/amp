@@ -1,0 +1,29 @@
+---
+# Default state for all rules
+default: true
+
+# MD003/heading-style/header-style - Heading style
+MD003:
+  style: "atx"
+
+# MD004/ul-style - Unordered list style
+MD004:
+  style: "dash"
+
+# MD007/ul-indent - Unordered list indentation
+MD007:
+  indent: 4
+
+# MD013/line-length - Line length
+MD013:
+  code_blocks: false
+  line_length: 88
+
+# MD035/hr-style - Horizontal rule style
+MD035:
+  style: "---"
+
+# MD031/blanks-around-fences
+#   - Fenced code blocks should be surrounded by blank lines
+# Such blank lines break GitLab's Markdown renderer
+MD031: false

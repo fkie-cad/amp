@@ -1,0 +1,87 @@
+---
+version: "3.9"
+services:
+  honeypots:
+    build:
+      dockerfile: Dockerfile
+    init: true
+    restart: always
+    ports:
+      # FTP
+      - "0.0.0.0:21:21/tcp"
+      # SSH
+      - "0.0.0.0:22:22/tcp"
+      # Telnet
+      - "0.0.0.0:23:23/tcp"
+      # SMTP
+      - "0.0.0.0:25:25/tcp"
+      # DNS
+      - "0.0.0.0:53:53/udp"
+      # DHCP
+      - "0.0.0.0:67:67/udp"
+      # HTTP
+      - "0.0.0.0:80:80/tcp"
+      # POP3
+      - "0.0.0.0:110:110/tcp"
+      # NTP
+      - "0.0.0.0:123:123/udp"
+      # IMAP
+      - "0.0.0.0:143:143/tcp"
+      # SNMP
+      - "0.0.0.0:161:161/udp"
+      # LDAP
+      - "0.0.0.0:389:389/tcp"
+      # HTTPS
+      - "0.0.0.0:443:443/tcp"
+      # SMB
+      - "0.0.0.0:445:445/tcp"
+      # IPP
+      - "0.0.0.0:631:631/tcp"
+      # MSSQL
+      - "0.0.0.0:1433:1433/tcp"
+      # Oracle
+      - "0.0.0.0:1521:1521/tcp"
+      # HL7
+      - "0.0.0.0:2575:2575/tcp"
+      # Mysql
+      - "0.0.0.0:3306:3306/tcp"
+      # RDP
+      - "0.0.0.0:3389:3389/tcp"
+      # SIP
+      - "0.0.0.0:5060:5060/udp"
+      # HTTP Proxy
+      - "0.0.0.0:8080:8080/tcp"
+      # PJL
+      - "0.0.0.0:9100:9100/tcp"
+      # DICOM
+      - "0.0.0.0:11112:11112/tcp"
+    volumes:
+      - type: bind
+        source: ./logs/
+        target: /opt/honeypots/logs/
+      - type: bind
+        source: ./config.json
+        target: /opt/honeypots/config.json
+
+  logfetch:
+    # For configuration options see https://hub.docker.com/_/nginx
+    image: nginx:1.25.3
+    restart: always
+    environment:
+      - LOGFETCH_ROOT=/opt/honeypots/logs/
+      - NGINX_ENTRYPOINT_QUIET_LOGS=1
+    volumes:
+      - type: bind
+        source: ./nginx_logfetch.conf
+        target: /etc/nginx/templates/default.conf.template
+        read_only: true
+      - type: bind
+        source: ./.htpasswd
+        target: /etc/nginx/.htpasswd
+        read_only: true
+      - type: bind
+        source: ./logs/
+        target: /opt/honeypots/logs/
+        read_only: true
+    ports:
+      - "0.0.0.0:55555:80/tcp"

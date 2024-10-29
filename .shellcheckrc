@@ -1,0 +1,3 @@
+# Allow "source" on files outside the repo,
+# for example /etc/os-release
+external-sources=true

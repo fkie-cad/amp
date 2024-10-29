@@ -1,0 +1,13 @@
+# https://github.com/jorisroovers/gitlint
+
+[general]
+ignore=body-is-missing
+regex-style-search=true
+
+[author-valid-email]
+# Python-style regex that the commit author email address must match.
+regex=^[^@]+@fkie.fraunhofer.de$
+
+[title-match-regex]
+# Enforce that each commit message starts with a capital letter.
+regex=^[A-Z].*
